@@ -53,5 +53,15 @@ def get_data():
     data = response.json().get('data', [])
     return {"data": data}
 
+
+@app.route('/submit_todo', methods=['POST'])
+def submit_todo():
+    todo_data = {
+        "itemName": request.form.get("itemName"),
+        "itemDescription": request.form.get("itemDescription")
+    }
+    requests.post(BACKEND_URL + "/submittodoitem", data=todo_data)
+    return "To-Do Item Submitted!"
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port="5000",debug=True)

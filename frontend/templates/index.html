@@ -42,5 +42,14 @@
     </form>
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <a href="/api"><button>View Data</button></a>
+
+    <h2>To-Do Page</h2>
+    <form action="/submit_todo" method="post">
+      <label for="item_name">Item Name:</label><br />
+      <input type="text" id="item_name" name="itemName" required /><br />
+      <label for="item_desc">Item Description:</label><br />
+      <textarea id="item_desc" name="itemDescription" required></textarea><br />
+      <button type="submit">Add To-Do</button>
+    </form>
   </body>
 </html>
