@@ -3,7 +3,8 @@ from dotenv import load_dotenv
 import os
 import pymongo
 
-# Load environment variables from .env file
+# Load environment variables from .env file.
+
 load_dotenv()
 
 MONGO_URI = os.getenv('MONGO_URI')
