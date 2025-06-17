@@ -58,6 +58,8 @@ def get_data():
 def submit_todo():
     todo_data = {
         "itemId": request.form.get("itemId"),
+        "itemUUID": request.form.get("itemUUID"),
+        "itemHash": request.form.get("itemHash"),
         "itemName": request.form.get("itemName"),
         "itemDescription": request.form.get("itemDescription")
     }
