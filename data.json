@@ -1,0 +1,9 @@
+{
+    "name": "Python Tute Dude",
+  "description": "Implementing git commands.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tute Dude",
+    "email": "mukul@example.com"
+  }
+}
