@@ -40,5 +40,19 @@ def get_data():
         item['_id'] = str(item['_id'])
     return {"data": data}
 
+@app.route('/submittodoitem', methods=['POST'])
+def submit_todo_item():
+    item_name = request.form.get("itemName")
+    item_desc = request.form.get("itemDescription")
+    if item_name and item_desc:
+        collection.insert_one({
+            "itemName": item_name,
+            "itemDescription": item_desc
+        })
+        return "To-Do item submitted successfully."
+    else:
+        return "Missing item name or description.", 400
+
+
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="8000", debug=True)
