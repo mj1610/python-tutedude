@@ -57,6 +57,7 @@ def get_data():
 @app.route('/submit_todo', methods=['POST'])
 def submit_todo():
     todo_data = {
+        "itemId": request.form.get("itemId"),
         "itemName": request.form.get("itemName"),
         "itemDescription": request.form.get("itemDescription")
     }
